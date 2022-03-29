@@ -1,8 +1,8 @@
 <?php
-class Home extends Controller{
+class HomeController extends Controller{
 
     public function __construct(){
-        $this->model = $this->model("Main");
+        $this->model = $this->model("Home");
     }
 
     public function index(){
