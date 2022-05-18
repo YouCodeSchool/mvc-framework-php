@@ -12,7 +12,9 @@ class Model{
     private $db_handler;
     private $stmt;
 
-    public function __construct(){
+    public function __construct($table, $primaryKey){
+        $this->table = $table;
+        $this->primaryKey = $primaryKey;
         $conn = "mysql:host=" . $this->db_host . ";dbname=" . $this->db_name;
         $options = array(
             PDO::ATTR_PERSISTENT => true,
